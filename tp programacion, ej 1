@@ -20,27 +20,33 @@
                   border-radius: 15px;
                   box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
                   transition: transform 0.3s ease;
+                  box-shadow: 0.3s ease;
         }
         #tarjeta:hover {
                         transform: translateY(-10px);
+                        box-shadow: 0px 12px 25px rgba(0,0,0,0.3);
         }
         .foto {
                width: 100px;
                height: 100px;
                border-radius: 50%;
                object-fit: cover;
+               margin-bottom: 10px;
         }
         .nombre {
                   font-size: 22px;
                   font-weight: bold;
+                  margin: 10px;
         }
 
         .rol {
-              color: black;
+              color: gray;
+              margin-bottom: 10px;
         }
         .descripcion {
                      font-size: 14px;
                      margin: 10px;
+                     color: #555;
         }
         .estadisticas {
                        display: flex;
@@ -53,7 +59,7 @@
     <div id="tarjeta">
         <img src="https://via.placeholder.com/100" class="foto">
 
-        <h2 class="nombre">Karen</h2>
+        <h2 class="nombre">Karen barraza</h2>
         <p class="rol">Programadora</p>
         <p class="descripcion">Me gusta aprender desarrollo web y mejorar mis habilidades.</p>
 
