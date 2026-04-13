@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarjeta Perfil</title>
+
+    <style>
+        /* CSS va acá */
+    </style>
+</head>
+<body>
+
+    <!-- Tarjeta -->
+    <div id="tarjeta">
+        <img src="https://via.placeholder.com/100" class="foto">
+
+        <h2 class="nombre">Karen</h2>
+        <p class="rol">Programadora</p>
+        <p class="descripcion">Me gusta aprender desarrollo web y mejorar mis habilidades.</p>
+
+        <div class="estadisticas">
+            <div>
+                <p>100</p>
+                <span>Seguidores</span>
+            </div>
+            <div>
+                <p>50</p>
+                <span>Siguiendo</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
