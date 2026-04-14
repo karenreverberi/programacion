@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarjeta Perfil</title>
 
     <style>
@@ -10,10 +11,10 @@
               justify-content: center;
               align-items: center;
               height: 100vh;
-              background-color: pink;
+              background-color: rgb(248, 216, 237);
          } 
         #tarjeta {
-                  background: white;
+                  background: whitesmoke;
                   padding: 20px;
                   width: 300px;
                   text-align: center;
@@ -57,11 +58,11 @@
 </head>
 <body>
     <div id="tarjeta">
-        <img src="https://via.placeholder.com/100" class="foto">
+        <img src="foto.jpeg" class="foto">
 
-        <h2 class="nombre">Karen barraza</h2>
-        <p class="rol">Programadora</p>
-        <p class="descripcion">Me gusta aprender desarrollo web y mejorar mis habilidades.</p>
+        <h2 class="nombre">Karen Barraza</h2>
+        <p class="rol">futura Programadora</p>
+        <p class="descripcion">Aprendiendo desarrollo web y mejorarando mis habilidades.</p>
 
         <div class="estadisticas">
             <div>
@@ -69,8 +70,12 @@
                 <span>Seguidores</span>
             </div>
             <div>
-                <p>50</p>
+                <p>557</p>
                 <span>Siguiendo</span>
+            </div>
+            <div>
+                <p>7,8k</p>
+                <span>me gustas</span>
             </div>
         </div>
     </div>
