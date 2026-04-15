@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Queries PRO++</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.active { display: block; }
+
+h1 { font-size: 2.2rem; }
+p, li { font-size: 1.2rem; }
+
+.code {
+  background: #111;
+  color: #0f0;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  white-space: pre-wrap;
+}
+
+.demo {
+  margin-top: 20px;
+  padding: 20px;
+  background: lightblue;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .demo {
+    background: orange;
+  }
+}
+
+.nav {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.counter {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.slide:nth-child(odd){ background:#1e293b;color:white;}
+.slide:nth-child(even){ background:#e2e8f0;color:black;}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div class="slide active">
+  <h1>Media Queries</h1>
+  <p>Clase completa + ejercicios</p>
+</div>
+
+<!-- EXPLICACION -->
+<div class="slide">
+  <h1>¿Qué son?</h1>
+  <p><b>Son condiciones en CSS.
+  <p>👉 Funcionan como un IF: si se cumple → aplico estilos</p>
+</div>
+
+<!-- EXPLICACION -->
+<div class="slide">
+  <h1>¿Para qué sirven?</h1>
+  <ul>
+    <li>Hacer diseño responsive</li>
+    <li>Adaptar a celular, tablet y desktop</li>
+    <li>Mejorar la experiencia del usuario</li> 
+  </ul>
+</div>
+
+
+<!-- PREDICCION -->
+<div class="slide">
+  <h1>Sintaxis</h1>
+  <div class="code">
+@media (max-width: 600px) {
+  body {
+    background: red;
+  }
+}
+  
+  </div>
+</div>
+
+
+<!-- EXPLICACION -->
+<div class="slide">
+  <h1>max-width vs min-width</h1>
+  <p><b>max-width (como máximo)</b>: aplica hacia abajo</p>
+  <p><b>min-width (como mínimo)</b>: aplica hacia arriba</p>
+</div>
+
+
+<!-- DEMO -->
+<div class="slide">
+  <h1>Demo</h1>
+  <p>Achicá la pantalla 👇</p>
+  <div class="demo">Cambio de color</div>
+</div>
+
+<!-- PREDICCION -->
+<div class="slide">
+  <h1>Predicción</h1>
+  <div class="code">
+h1 { color: blue; }
+
+@media (min-width: 768px) {
+  h1 { color: red; }
+}
+  </div>
+  <p>¿Color en celular? ¿y en desktop?</p>
+</div>
+
+<!-- RESPUESTA -->
+<div class="slide">
+  <h1>Respuesta</h1>
+  <p>Celular → azul</p>
+  <p>Desktop → rojo</p>
+</div>
+
+<!-- EJ 1 -->
+<div class="slide">
+  <h1>Ejercicio 1</h1>
+  <p>Cambiar fondo en pantallas chicas</p>
+  <div class="code">
+body { background: blue; }
+/* completar */
+  </div>
+</div>
+
+<div class="slide">
+  <h1>Solución</h1>
+  <div class="code">
+@media (max-width: 600px) {
+  body { background: red; }
+}
+  </div>
+</div>
+
+<!-- EJ 2 -->
+<div class="slide">
+  <h1>Ejercicio 2</h1>
+  <p>Mostrar solo en desktop</p>
+  <div class="code">
+.mensaje { display: none; }
+/* completar */
+  </div>
+</div>
+
+<div class="slide">
+  <h1>Solución</h1>
+  <div class="code">
+@media (min-width: 768px) {
+  .mensaje { display: block; }
+}
+  </div>
+</div>
+
+<!-- EJ 3 -->
+<div class="slide">
+  <h1>Ejercicio 3</h1>
+  <p>Cambiar ancho</p>
+  <div class="code">
+.caja { width: 100%; }
+/* completar */
+  </div>
+</div>
+
+<div class="slide">
+  <h1>Solución</h1>
+  <div class="code">
+@media (min-width: 768px) {
+  .caja { width: 50%; }
+}
+  </div>
+</div>
+
+<!-- EJ 4 -->
+<div class="slide">
+  <h1>Ejercicio 4</h1>
+  <p>Menú vertical → horizontal</p>
+  <div class="code">
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+/* completar */
+  </div>
+</div>
+
+<div class="slide">
+  <h1>Solución</h1>
+  <div class="code">
+@media (min-width: 768px) {
+  .menu { flex-direction: row; }
+}
+  </div>
+</div>
+
+<!-- EJ 5 -->
+<div class="slide">
+  <h1>Ejercicio 5</h1>
+  <p>Grid 1 columna → 3 columnas</p>
+  <div class="code">
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+/* completar */
+  </div>
+</div>
+
+<div class="slide">
+  <h1>Solución</h1>
+  <div class="code">
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+  </div>
+</div>
+
+<!-- EJ 6 -->
+<div class="slide">
+  <h1>Ejercicio 6</h1>
+  <p>Imagen chica → grande</p>
+  <div class="code">
+img { width: 100px; }
+/* completar */
+  </div>
+</div>
+
+<div class="slide">
+  <h1>Solución</h1>
+  <div class="code">
+@media (min-width: 768px) {
+  img { width: 200px; }
+}
+  </div>
+</div>
+
+<!-- FINAL CASA -->
+<div class="slide">
+  <h1>Ejercicio FINAL (casa)</h1>
+  <p>Hacer tarjetas responsive:</p>
+  <ul>
+    <li>Celular → vertical</li>
+    <li>Desktop → horizontal</li>
+    <li>Cambiar color</li>
+  </ul>
+
+  <div class="code">
+.contenedor {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background: lightblue;
+}
+  </div>
+</div>
+
+<div class="slide">
+  <h1>Solución FINAL</h1>
+  <div class="code">
+@media (min-width: 768px) {
+  .contenedor {
+    flex-direction: row;
+  }
+
+  .card {
+    background: orange;
+  }
+}
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <button onclick="prev()">⬅</button>
+  <button onclick="next()">➡</button>
+</div>
+
+<div class="counter" id="counter"></div>
+
+<script>
+let current = 0;
+const slides = document.querySelectorAll(".slide");
+const counter = document.getElementById("counter");
+
+function showSlide(index) {
+  slides[current].classList.remove("active");
+  current = (index + slides.length) % slides.length;
+  slides[current].classList.add("active");
+  counter.innerText = (current+1) + " / " + slides.length;
+}
+
+function next(){ showSlide(current+1); }
+function prev(){ showSlide(current-1); }
+
+document.addEventListener("keydown", (e)=>{
+  if(e.key==="ArrowRight") next();
+  if(e.key==="ArrowLeft") prev();
+});
+
+showSlide(0);
+</script>
+
+</body>
+</html>
