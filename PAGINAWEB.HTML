@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <style>
+        /* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* HEADER (FLEXBOX) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 15px;
+}
+
+.main-nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    color: #00adb5;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: pink;
+    color: white;
+}
+
+.btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #222;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: #222;
+}
+
+/* PRODUCTOS (GRID) */
+.productos {
+    padding: 40px;
+    text-align: center;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* TARJETAS */
+.product-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ABOUT */
+.about {
+    padding: 40px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+/* FOOTER (FLEXBOX) */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+.footer a {
+    color: white;
+    margin-left: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+    </style>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">KRB.beauty</div>
+        <nav class="main-nav">
+            <a href="#">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Descubrí lo mejor en productos</h1>
+        <p>Calidad, estilo y los mejores precios en un solo lugar.</p>
+        <button class="btn">Ver Productos</button>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section id="productos" class="productos">
+        <h2>Nuestros Productos</h2>
+
+        <div class="grid-productos">
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="">
+                <h3>Producto 1</h3>
+                <p>Descripción breve del producto.</p>
+                <span>$100</span>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="">
+                <h3>Producto 2</h3>
+                <p>Descripción breve del producto.</p>
+                <span>$150</span>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="">
+                <h3>Producto 3</h3>
+                <p>Descripción breve del producto.</p>
+                <span>$200</span>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="">
+                <h3>Producto 4</h3>
+                <p>Descripción breve del producto.</p>
+                <span>$250</span>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="">
+                <h3>Producto 5</h3>
+                <p>Descripción breve del producto.</p>
+                <span>$300</span>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="">
+                <h3>Producto 6</h3>
+                <p>gloss maybelline </p>
+                <span>$31.500</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS (BONUS) -->
+    <section class="about">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una tienda comprometida con ofrecer productos de calidad y una excelente experiencia al cliente.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="footer">
+        <p>Contacto: KRB.beauty@gmail.com</p>
+        <div class="social">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+        </div>
+    </footer>
+
+</body>
+</html>
