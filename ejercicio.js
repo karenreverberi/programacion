@@ -1,3 +1,11 @@
+// ejercicio 1 
 let dias= ["domingo","lunes","martes","miercoles","jueves"];
-let n= newDate.getDay();
-console.log(dias[n]);
+let meses= ["enero","febrero","marzo","abril","mayo","junnio","julio"];
+let newDate= new Date ();
+let dia= dias[newDate.getDay()];
+let fecha= newDate.getDate();
+let mes= meses[newDate.getMonth()];
+let anio= newDate.getFullYear();
+
+
+console.log("hoy es"+ dia + " "+ fecha + "de" + mes + "del anio" + anio);
