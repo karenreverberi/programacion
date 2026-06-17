@@ -8,4 +8,4 @@ let mes= meses[newDate.getMonth()];
 let anio= newDate.getFullYear();
 
 
-console.log("hoy es"+ dia + " "+ fecha + "de" + mes + "del anio" + anio);
+console.log("hoy es"+ dias[dia] + " "+fecha + "de" + meses[mes] + "del anio" + anio);
